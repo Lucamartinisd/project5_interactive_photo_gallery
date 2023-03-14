@@ -10,16 +10,13 @@ window.addEventListener('load', function() {
 });
 
 /* ======================================================================
-        picSearch Box Functions
+        Search Box Functions
 ======================================================================== */
 const picSearch = document.getElementById('picSearch');
-picSearch.addEventListener('keyup', x => {
+picSearch.addEventListener('keyup', e => {
 
-    let currentValue = x.target.value.toLowerCase();
-    console.log(currentValue);
+    let currentValue = e.target.value.toLowerCase();
     let captions = document.querySelectorAll('a[data-caption]');
-    console.log(captions);
-
     captions.forEach(caption => {
       
         if (caption.dataset.caption.toLowerCase().includes(currentValue)) {
