@@ -1,3 +1,6 @@
+/* ======================================================================
+        Baguette
+======================================================================== */
 window.addEventListener('load', function() {
     baguetteBox.run('.gallery', {
         animation: 'fadeIn',
@@ -6,17 +9,20 @@ window.addEventListener('load', function() {
     );
 });
 
-const pSearch = document.getElementById('search');
-pSearch.addEventListener('keyup', x => {
+/* ======================================================================
+        picSearch Box Functions
+======================================================================== */
+const picSearch = document.getElementById('picSearch');
+picSearch.addEventListener('keyup', x => {
 
-    let searchValue = x.target.value.toLowerCase();
-    console.log(searchValue);
+    let currentValue = x.target.value.toLowerCase();
+    console.log(currentValue);
     let captions = document.querySelectorAll('a[data-caption]');
     console.log(captions);
 
     captions.forEach(caption => {
       
-        if (caption.dataset.caption.toLowerCase().includes(searchValue)) {
+        if (caption.dataset.caption.toLowerCase().includes(currentValue)) {
             caption.style.display = 'block';
         } else {
             caption.style.display = 'none';
