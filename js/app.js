@@ -26,5 +26,3 @@ picSearch.addEventListener('keyup', e => {
         }
     })
 });
-
-const search = new Filter('search', 'data-caption');
